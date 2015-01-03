@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/rmacduff/puppet/ops-puppet-public/modules/fresh-app/manifests'
-let g:netrw_dirhist_2='/Users/rmacduff/puppet/rmacduff-rockbox/puppet/rockbox/postfix-whitelist/templates'
-let g:netrw_dirhist_3='/Users/rmacduff/puppet/rockbox/puppet/rockbox/puppet/manifests/master'
