@@ -15,6 +15,7 @@ filetype plugin indent on
 " solarized
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 " set tab space to 4
