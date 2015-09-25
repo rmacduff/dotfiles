@@ -19,8 +19,8 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " set tab space to 4
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " show line numbers
