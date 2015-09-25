@@ -8,15 +8,8 @@
 
 set ignorecase
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
-
-" solarized
-syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
 
 " set tab space to 4
 set tabstop=2
@@ -135,6 +128,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jamessan/vim-gnupg'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -169,3 +163,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" solarized
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
