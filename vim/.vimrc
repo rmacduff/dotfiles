@@ -148,6 +148,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'rodjek/vim-puppet'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
+" Ansible yaml syntax highlighting
+Plugin 'pearofducks/ansible-vim'
+" Jedi Vim
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
