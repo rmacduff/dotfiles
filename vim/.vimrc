@@ -152,6 +152,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'pearofducks/ansible-vim'
 " Jedi Vim
 Plugin 'davidhalter/jedi-vim'
+" vim-terraform
+Plugin 'hashivim/vim-terraform'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
