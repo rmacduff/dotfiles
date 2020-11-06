@@ -11,13 +11,43 @@ set ignorecase
 syntax on
 filetype plugin indent on
 
+set encoding=utf-8
+
 " set tab space to 4
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Python-specific settings
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+
+"Flagging Unnecessary Whitespace
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Other development indentations
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+
+" Enable backspace key in insert mode
+set backspace=2
+
+
 " show line numbers
 set number
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
 
 " Tell vim to remember certain things when we exit
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -148,12 +178,20 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'rodjek/vim-puppet'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 " Ansible yaml syntax highlighting
 Plugin 'pearofducks/ansible-vim'
 " Jedi Vim
 Plugin 'davidhalter/jedi-vim'
 " vim-terraform
 Plugin 'hashivim/vim-terraform'
+" Bundles recommended in https://realpython.com/vim-and-python-a-match-made-in-heaven/
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'nvie/vim-flake8'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
