@@ -158,6 +158,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'joshdick/onedark.vim'
 Plugin 'jamessan/vim-gnupg'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -211,5 +213,5 @@ filetype plugin indent on    " required
 " solarized
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme onedark
