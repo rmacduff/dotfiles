@@ -160,6 +160,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'joshdick/onedark.vim'
+" golang
+Plugin 'fatih/vim-go'
 Plugin 'jamessan/vim-gnupg'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -173,11 +175,11 @@ Plugin 'L9'
 "Plugin 'file:///home/rmacduff/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
 " Puppet syntax highlighting
-Plugin 'rodjek/vim-puppet'
+"Plugin 'rodjek/vim-puppet'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -187,6 +189,9 @@ Plugin 'pearofducks/ansible-vim'
 Plugin 'davidhalter/jedi-vim'
 " vim-terraform
 Plugin 'hashivim/vim-terraform'
+" Text aligning
+Plugin 'junegunn/vim-easy-align'
+Plugin 'godlygeek/tabular'
 " Bundles recommended in https://realpython.com/vim-and-python-a-match-made-in-heaven/
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
