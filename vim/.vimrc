@@ -192,6 +192,8 @@ Plugin 'hashivim/vim-terraform'
 " Text aligning
 Plugin 'junegunn/vim-easy-align'
 Plugin 'godlygeek/tabular'
+" Formatting
+Plugin 'tpope/vim-surround'
 " Bundles recommended in https://realpython.com/vim-and-python-a-match-made-in-heaven/
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
@@ -220,3 +222,7 @@ syntax enable
 set background=dark
 "let g:solarized_termcolors=256
 colorscheme onedark
+
+" vim-terraform settings
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
