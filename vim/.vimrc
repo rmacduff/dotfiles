@@ -44,6 +44,7 @@ set backspace=2
 
 " show line numbers
 set number
+set relativenumber
 
 " Enable folding
 set foldmethod=indent
