@@ -18,6 +18,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Show hidden characters, tabs, trailing whitespace
+set list
+set listchars=tab:→\ ,trail:·,nbsp:·
+
 " Python-specific settings
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -63,17 +67,31 @@ set noruler
 set laststatus=2
 
 " Statusline config
-set statusline=%t       "tail of the filename
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+
+" From https://shapeshed.com/vim-statuslines/
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\
 
 " Centralizing storage of backups, undos and swap from:
 " https://github.com/docwhat/homedir-vim/blob/master/vimrc/.vimrc
@@ -161,6 +179,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'joshdick/onedark.vim'
+Plugin 'tomasr/molokai'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'romainl/Apprentice'
 " golang
 Plugin 'fatih/vim-go'
 Plugin 'jamessan/vim-gnupg'
@@ -195,6 +216,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'godlygeek/tabular'
 " Formatting
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 " Bundles recommended in https://realpython.com/vim-and-python-a-match-made-in-heaven/
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
@@ -218,11 +240,16 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" solarized
 syntax enable
-set background=dark
+" solarized
+"set background=dark
 "let g:solarized_termcolors=256
-colorscheme onedark
+" molokai settings
+" let g:molokai_original = 1
+" let g:rehash256 = 1
+" colorscheme molokai
+let g:seoul256_background = 233
+colorscheme seoul256
 
 " vim-terraform settings
 let g:terraform_align=1
