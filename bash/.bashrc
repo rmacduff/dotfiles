@@ -2,6 +2,7 @@
 #set -x
 
 for i in ~/.bashrc.d/*.sh; do
-  . $i
+  # shellcheck source=/dev/null
+  . "$i"
 done; unset i
 
