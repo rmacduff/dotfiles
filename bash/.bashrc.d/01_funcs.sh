@@ -2,5 +2,6 @@
 
 # Useful functions
 
+# Custom functions for specific environments
 # shellcheck source=/dev/null
-. "$HOME"/functions/*.sh
+. "$HOME"/.bash.d/functions/*.sh

@@ -2,5 +2,6 @@
 
 # Useful aliases
 
+# Custom aliases for specific environments
 # shellcheck source=/dev/null
-. "$HOME"/aliases/*.sh
+. "$HOME"/.bash.d/aliases/*.sh
