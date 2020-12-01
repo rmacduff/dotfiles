@@ -35,3 +35,5 @@ for completion in "git-completion.bash" "kubens" "kubectl"; do
   # shellcheck source=/dev/null
   [[ -r "${BREW_HOME}/etc/bash_completion.d/${completion}" ]] && . "${BREW_HOME}/etc/bash_completion.d/${completion}"
 done
+
+export LESS="-x2 -R -M"
