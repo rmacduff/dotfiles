@@ -37,3 +37,8 @@ for completion in "git-completion.bash" "kubens" "kubectl"; do
 done
 
 export LESS="-x2 -R -M"
+
+# Each bash session appends to history
+shopt -s histappend
+
+export HISTSIZE=5000
