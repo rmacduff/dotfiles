@@ -220,7 +220,7 @@ Plugin 'tpope/vim-commentary'
 " Bundles recommended in https://realpython.com/vim-and-python-a-match-made-in-heaven/
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
