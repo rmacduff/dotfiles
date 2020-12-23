@@ -15,8 +15,12 @@ mk_gh_repo() {
     -d "{ \
         \"name\": \"$1\", \
         \"auto_init\": true, \
-        \"private\": true, \
-        \"gitignore_template\": \"nanoc\" \
+        \"private\": true
       }" \
     https://api.github.com/user/repos
+}
+
+mkcd() {
+  mkdir -p "$1"
+  cd "$1" || return
 }
