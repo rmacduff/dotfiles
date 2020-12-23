@@ -1,0 +1,4 @@
+-w "dnslookup: %{time_namelookup}\nconnect: %{time_connect}\nappconnect: %{time_appconnect}\npretransfer: %{time_pretransfer}\nstarttransfer: %{time_starttransfer}\ntime_redirect: %{time_redirect}\ntotal: %{time_total}\nsize: %{size_download}\n"
+-o /dev/null
+-s
+-S
