@@ -9,12 +9,11 @@ export GIT_PS1_SHOWDIRTYSTATE='y'
 export GIT_PS1_SHOWCOLORHINTS='y'
 export GIT_PS1_SHOWUNTRACKEDFILES='y'
 
-# shellcheck source=/dev/null
-source "${BREW_HOME}/opt/kube-ps1/share/kube-ps1.sh"
-
-
 function __prompt_command() {
   EXIT=${PIPESTATUS[-1]}
+
+  # shellcheck source=/dev/null
+  source "${BREW_HOME}/opt/kube-ps1/share/kube-ps1.sh"
 
   # Use names for colours
   local NoC='\[\e[0m\]' # Reset colour
