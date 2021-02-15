@@ -7,6 +7,8 @@
 
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/go/bin:$PATH
 
+[[ -r "${HOME}/go/bin" ]] && export PATH=${HOME}/go/bin:$PATH
+
 case $WORK_ENV in
   exiger)
     export PATH=$HOME/brew/opt/curl/bin:$HOME/brew/bin:$HOME/.asdf/bin:$PATH
@@ -42,3 +44,5 @@ export LESS="-x2 -R -M"
 shopt -s histappend
 
 export HISTSIZE=5000
+
+export BROWSER="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"

@@ -29,7 +29,7 @@ function __prompt_command() {
   local Cya='\[\e[0;36m\]';
   local Whi='\[\e[0;37m\]';
 
-  PS1="${Cya}\D{%Y-%m-%d %H:%M:%S} ${Gre}\u@\h${NoC}: \w $(__git_ps1 '(%s)')${NoC} $(kube_ps1)\n(${EXIT}) \$ ${NoC}"
+  PS1="${Cya}\D{%Y-%m-%d %H:%M:%S} ${Gre}\u${NoC} @ ${Pur}\h${NoC}: \w $(__git_ps1 '(%s)')${NoC} $(kube_ps1)\n(${EXIT}) \$ ${NoC}"
 }
 
 export PROMPT_COMMAND=__prompt_command
