@@ -7,3 +7,5 @@
 . "$HOME"/.bash.d/aliases/*.sh
 
 alias curlt="curl -K ~/.curlrc.d/timing.rc "
+
+alias wttr="curl https://wttr.in/"
